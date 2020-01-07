@@ -1,0 +1,11 @@
+baseURL = "https://www.meine-domain.ch/"
+title = "Mein Blog"
+
+languageCode = "de-CH"
+removePathAccents = true
+disableFastRender = true
+sectionPagesMenu = "main"
+
+[Params]
+clickablePhotos = true
+smallPreviewImages = true

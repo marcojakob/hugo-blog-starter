@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+{{ partial "navigation.html" . }}
+
+<div class="container">
+  <h1 class="mt-5">{{ .Title }}</h1>
+  <p class="text-secondary">{{ .Date.Format "02.01.2006" }}</p>
+  <p>
+    <img class="img-fluid" src="{{ .RelPermalink }}{{ .Params.image }}" alt="{{ .Title }}" />
+  </p>
+
+  <p>{{ .Content }}</p>
+
+</div>
+
+{{ end }}

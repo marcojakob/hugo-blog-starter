@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+{{ partial "navigation.html" . }}
+
+<div class="container">
+  <h1 class="mt-5">Blogeinträge</h1>
+  
+  {{ .Content }}
+  
+  <div class="row mt-5">
+    {{ range .Pages }}
+    <div class="col-sm-6 mb-5">
+      <h2>{{ .Title }}</h2>
+      <p class="text-secondary">{{ .Date.Format "02.01.2006" }}</p>
+      <p>
+        <img class="img-fluid" src="{{ .RelPermalink }}{{ .Params.image }}" alt="{{ .Title }}" />
+      </p>
+    
+      <p>{{ .Description }}</p>
+      
+      <a class="btn btn-dark" href="{{ .RelPermalink }}" title="{{ .Title }}">Weiterlesen</a>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+{{ end }}
